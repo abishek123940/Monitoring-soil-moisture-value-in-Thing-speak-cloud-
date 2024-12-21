@@ -84,8 +84,37 @@ Prototype and build IoT systems without setting up servers or developing web sof
 ![image](https://github.com/user-attachments/assets/5beaf86c-0d5d-4b99-9c22-bb0351f487ab)
 
 # PROGRAM:
+
+const int Soil_pin = 25;  // Soil MOisture */ ADC CH2
+
+void setup() {
+
+  Serial.begin(9600);
+  
+}
+
+void loop() {
+
+  int Soil_adc_val;
+  
+  Soil_adc_val = analogRead(Soil_pin);  /* Read Temperature */
+  
+  Serial.print("Soil Moisture Range = ");
+
+  Serial.println(Soil_adc_val);
+  
+  delay(1000);
+  
+}
+
 # CIRCUIT DIAGRAM:
+
+![image](https://github.com/user-attachments/assets/f0b3d87e-7e2a-4442-97f2-d49a6c2b9acd)
+
 # OUTPUT:
+
+![image](https://github.com/user-attachments/assets/c1051c74-d5fa-4978-9784-ec972e6f067d)
+
 # RESULT:
 Thus the soil moisture values are updated in the Thing speak cloud using ESP32 controller.
 
